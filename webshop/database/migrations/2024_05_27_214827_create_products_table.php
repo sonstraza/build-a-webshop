@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->unsignedInteger('price'); // 19.99 -> 1999
-            $table->unsignedInteger('main_image_id')->nullable();
             $table->timestamps();
         });
     }
