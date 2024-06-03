@@ -19,7 +19,7 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->randomElement(['Laravel Cap', 'Tshirt', 'Blanket', 'Sweater']),
             'description' => $this->faker->paragraph(2),
-            'price' => $this->faker->numberBetween(5, 45),
+            'price' => $this->faker->numberBetween(5_00, 45_00),
         ];
     }
 }

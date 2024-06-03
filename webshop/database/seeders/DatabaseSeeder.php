@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Product::factory(4)
-            ->hasVariants(5)
             ->create();
     }
 }
