@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Storefront;
+use App\Http\Livewire\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', StoreFront::class)->name('home');
+Route::get('/product/{product}', Product::class)->name('product');
 
 //Route::middleware([
 //    'auth:sanctum',
