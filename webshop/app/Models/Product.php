@@ -14,6 +14,12 @@ class Product extends Model
 {
     use HasFactory;
 
+    public Product $product;
+    public function mount(Product $product)
+    {
+        $this->product = $product;
+    }
+
     public function variants(): HasMany
     {
         return $this->hasMany(ProductVariant::class);
@@ -22,6 +28,11 @@ class Product extends Model
     public function image(): HasOne
     {
         return $this->hasOne(Image::class)->ofMany('featured', 'max');
+    }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(Image::class);
     }
 
     protected function price(): Attribute
