@@ -14,12 +14,6 @@ class Product extends Model
 {
     use HasFactory;
 
-    public Product $product;
-    public function mount(Product $product)
-    {
-        $this->product = $product;
-    }
-
     public function variants(): HasMany
     {
         return $this->hasMany(ProductVariant::class);
